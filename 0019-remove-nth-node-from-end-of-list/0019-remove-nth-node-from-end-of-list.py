@@ -31,8 +31,43 @@ class Solution:
 #             curr = temp
         
 #         node = 1
-#         while prev:
-#             temp = prev
+#         tail = ListNode(0, prev)
+#         print(tail)
+        
+#         while node <= n and tail:
+#             if node == n:
+#                 print("node: ",node)
+#                 print(tail.val)
+#                 if n == 1:
+#                     tail = None
+#                 else:
+#                     tail.next = tail.next.next
+#                 break
+#             else:
+#                 print("in else, ", tail.val)
+#                 node += 1
+#                 tail = tail.next
+#                 print("2nd else: ", tail.val)
+
+        
+#         print(prev)
+        
+#         prev2, curr2 = None, prev
+#         while curr2:
+#             temp = curr2.next
+#             curr2.next = prev2
+#             prev2 = curr2
+#             curr2 = temp
+        
+#         return prev2
+                
+            
+            
+            
+            
+            
+        
+
             
                 
                 
