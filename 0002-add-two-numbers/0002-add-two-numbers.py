@@ -6,8 +6,8 @@
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         
+#       MY SOLUTION:
         curr = l1
-        
         x = 1
         num1 = 0
         while curr:
@@ -48,6 +48,33 @@ class Solution:
             curr = temp
         
         return prev
+    
+#     NEETCODE SOLUTION:
+
+
+        dummy = ListNode(0)
+        tail = dummy
+        carry = 0
+        while l1 and l2:
+            add = l1.val + l2.val + carry
+            if add < 10:
+                new_node = ListNode(add)
+                tail.next = new_node
+            else:
+                mod = add % 10
+                quo = add // 10
+                new_node = ListNode(mod)
+                carry = quo
+                tail.next = new_node
+
+            tail = tail.next
+
+        return dummy.next
+        
+        
+        
+        
+        
             
             
             
