@@ -18,6 +18,6 @@ class Solution:
                 tempList.append(tail)
             tail = tail.next
         
-        return False
+
                 
         
