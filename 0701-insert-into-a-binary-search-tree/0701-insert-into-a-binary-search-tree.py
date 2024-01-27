@@ -11,16 +11,76 @@ class Solution:
             return TreeNode(val)
         
         curr = root
-        while True:
-            if val > curr.val:
+        while curr:
+            if curr.val < val:
                 if not curr.right:
                     curr.right = TreeNode(val)
                     return root
                 curr = curr.right
-            else:
+            elif curr.val > val:
                 if not curr.left:
                     curr.left = TreeNode(val)
                     return root
                 curr = curr.left
+    
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+#         if not root:
+#             return TreeNode(val)
+        
+#         curr = root
+#         while True:
+#             if val > curr.val:
+#                 if not curr.right:
+#                     curr.right = TreeNode(val)
+#                     return root
+#                 curr = curr.right
+#             else:
+#                 if not curr.left:
+#                     curr.left = TreeNode(val)
+#                     return root
+#                 curr = curr.left
                     
         
