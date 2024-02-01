@@ -3,22 +3,22 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        slow = 0
-        for fast in range(len(nums)):
+        if len(nums) == 1:
+            return nums
+        
+        l = 0
+        r = l+1
+        
+        while l <= r < len(nums):
+            if nums[l] != 0:
+                l += 1
+  
+            if nums[r] != 0 and nums[l] == 0:
+                nums[l] = nums[r]
+                nums[r] = 0
             
-            if nums[fast] != 0 and nums[slow] == 0:
-                nums[slow], nums[fast] = nums[fast], nums[slow]
-
-            if nums[slow] != 0:
-                slow += 1
-#         if len(nums) == 1:
-#             return nums
+            r += 1
         
-#         l, r = 0, l+1
-        
-#         while l <= r < len(nums):
-#             if nums[l] != 0:
-#                 l += 1
-#             if nums[r] == 0:
+        return nums
                 
         
