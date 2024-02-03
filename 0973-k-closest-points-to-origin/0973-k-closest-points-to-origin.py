@@ -11,12 +11,12 @@ class Solution:
         res = []
         
         while len(res) < k:
-            res.append(heapq.heappop(minHeap))
+            dist,x,y = heapq.heappop(minHeap)
+            res.append([x,y])
         
-        final_res = []
-        for x,y,z in res:
-            final_res.append([y,z])
-        return final_res
+        return res
+        
+        
             
         
         
