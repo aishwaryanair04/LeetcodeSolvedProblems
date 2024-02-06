@@ -11,10 +11,8 @@ class Solution:
             currSum += nums[r]
             if len(window) == k:
                 maxAvg = max(maxAvg, (currSum/k))
-                print(maxAvg)
                 window.remove(nums[l])
                 currSum -= nums[l]
-                print(currSum)
                 l += 1
         
         return maxAvg
