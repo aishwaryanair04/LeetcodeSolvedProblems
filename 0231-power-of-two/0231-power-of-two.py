@@ -9,8 +9,5 @@ class Solution:
         while n > 1:
             n = n/2
         
-        if n ==1:
-            return True
-        else:
-            return 0
+        return True if n ==1 else 0
         
