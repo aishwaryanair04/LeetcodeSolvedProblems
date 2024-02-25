@@ -11,8 +11,57 @@ class Solution:
             return None
         
         res = TreeNode(root.val)
-        
         res.left = self.invertTree(root.right if root.right else None)
         res.right = self.invertTree(root.left if root.left else None)
         
         return res
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+#         if not root:
+#             return None
+        
+#         res = TreeNode(root.val)
+        
+#         res.left = self.invertTree(root.right if root.right else None)
+#         res.right = self.invertTree(root.left if root.left else None)
+        
+#         return res
