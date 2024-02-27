@@ -7,7 +7,62 @@
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         
-        # Iterative DFS
+#         if not root:
+#             return None
+        
+#         q = collections.deque([root])
+#         level = 0
+        
+#         while q:
+#             for i in range(len(q)):
+#                 node = q.popleft()
+#                 if node.left:
+#                     q.append(node.left)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # Iterative DFS(preorder)
         
         stack = [[root, 1]]
         res = 0
