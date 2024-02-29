@@ -17,6 +17,7 @@ class Solution:
             val = []
             for i in range(len(queue)):
                 node = queue.popleft()
+                print(node.val)
                 val.append(node.val)
                 if node.left:
                     queue.append(node.left)
