@@ -2,64 +2,6 @@ class Codec:
     def encode(self, strs: List[str]) -> str:
         """Encodes a list of strings to a single string.
         """
-
-        self.hashmap = {}    
-        for word in strs:
-            sorted_word = "".join(sorted(word))
-            self.hashmap[sorted_word] = word
-        encoded_words = self.hashmap.keys()
-        s = ""
-        breaker = "^&@"
-        for word in encoded_words:
-            s = s + word + breaker
-
-        return s
-        
-    
-    def decode(self, s: str) -> List[str]:
-        """Decodes a single string to a list of strings.
-        """
-        res = []
-        encoded_words = s.split("^&@")
-
-        for word in encoded_words:
-            if word:
-                res.append(self.hashmap[word])
-
-        return res
-
-                    
-                
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Codec:
-    def encode(self, strs: List[str]) -> str:
-        """Encodes a list of strings to a single string.
-        """
         encoded_string = ""
         for word in strs:
             encoded_string = encoded_string + str(len(word)) +'#' + word
