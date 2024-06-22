@@ -1,20 +1,33 @@
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         
-        joined = ""
+        if len(digits) == 1:
+            if digits[0] < 9:
+                digits[0] += 1
+            else:
+                digits = [1,0]
         
-        for num in digits:
-            joined += str(num)
+        else:
+            if digits[-1] < 9:
+                digits[-1] += 1
+            else:
+                for i in range(len(digits)-1, -1, -1):
+                    print(i)
+                    if digits[i] == 9:
+                        if i != 0:
+                            digits[i] = 0
+                            carry = 1
+                        else:
+                            digits[i] = 0
+                            digits = [1] + digits
+                    else:
+                        digits[i] += 1
+                        break
         
-        plusOne = str(int(joined) + 1)
+        return digits
+                        
+                    
         
-        res = []
-        
-        for char in plusOne:
-            res.append(int(char))
-        
-        return res
-            
         
         
         
