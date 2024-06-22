@@ -12,7 +12,6 @@ class Solution:
                 digits[-1] += 1
             else:
                 for i in range(len(digits)-1, -1, -1):
-                    print(i)
                     if digits[i] == 9:
                         if i != 0:
                             digits[i] = 0
