@@ -4,7 +4,7 @@ class Solution:
         words = sentence.split(' ')
         
         for i in range(len(words)):
-            if words[i][0] in ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'):
+            if words[i][0] in set('aeiouAEIOU'):
                 words[i] = words[i] + 'ma' + ('a'*(i+1))
             else:
                 letter = words[i][0]
