@@ -11,8 +11,11 @@ class Solution:
                         continue
                     if (j > 0 and board[i][j-1]) == 'X':
                         continue
+                    
+                    res.append((i,j))
                     count+= 1
         
+        print(res)
         return count
                     
                         
