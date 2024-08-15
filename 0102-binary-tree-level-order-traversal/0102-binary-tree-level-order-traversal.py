@@ -9,10 +9,10 @@ class Solution:
         
         if not root:
             return []
-        
+
         q = collections.deque([root])
-        stack = []
-        
+        res = []
+
         while q:
             val = []
             for i in range(len(q)):
@@ -22,9 +22,8 @@ class Solution:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-            
-            stack.append(val)
-        return stack
+            res.append(val)
+        return res
                 
             
                 
