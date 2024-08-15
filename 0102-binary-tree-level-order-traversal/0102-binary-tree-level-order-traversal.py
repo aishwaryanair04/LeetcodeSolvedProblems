@@ -23,7 +23,8 @@ class Solution:
                         q.append(node.left)
                     if node.right:
                         q.append(node.right)
-            res.append(val)
+            if val:
+                res.append(val)
         return res
                 
             
