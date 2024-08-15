@@ -7,20 +7,18 @@
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         
-        res = [0]
-        
-        def dfs(root):
-            if not root:
-                return -1
-            left = dfs(root.left)
-            right = dfs(root.right)
-            res[0] = max(res[0], left + right + 2)
-            
-            height = 1 + max(left, right)
-            
-            return height
-    
+        self.res = 0
+
+        # returns height
+        def dfs(curr):
+            if not curr:
+                return 0
+            left = dfs(curr.left)
+            right = dfs(curr.right)
+
+            self.res = max(self.res, left+right)
+            return 1 + max(left, right)
         dfs(root)
-        return res[0]
+        return self.res
         
         
