@@ -7,7 +7,7 @@ class Solution:
             if letter == "#":
                 if stackS != []:
                     stackS.pop()
-            if letter != "#":
+            else:
                 stackS.append(letter)
         
         s = ''.join(stackS)
@@ -16,7 +16,7 @@ class Solution:
             if letter == "#":
                 if stackT != []:
                     stackT.pop()
-            if letter != "#":
+            else:
                 stackT.append(letter)
         
         t = ''.join(stackT)
