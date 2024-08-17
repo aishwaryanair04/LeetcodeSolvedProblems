@@ -1,5 +1,10 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
+    
+            
+            
+        
+#         0(1) space, ideal solution:
         
         count, res = 0,0
         
@@ -14,7 +19,8 @@ class Solution:
         return res
             
             
-        
+#         hashmap but 0(n):
+
 #         count = {}
 #         res, maxCount = 0,0
         
@@ -25,6 +31,7 @@ class Solution:
         
 #         return res
         
+#     hashmap but set too:
 #         setNums = set(nums)
 #         hashmap = {}
         
