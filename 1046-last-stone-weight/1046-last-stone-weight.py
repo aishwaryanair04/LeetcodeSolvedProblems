@@ -8,6 +8,8 @@ class Solution:
             b = heapq.heappop(stones)
             if b > a:
                 heapq.heappush(stones, -(b - a))
+            elif a > b:
+                heapq.heappush(stones, -(a - b))
         
         if len(stones) == 0:
             return 0
