@@ -14,8 +14,6 @@ class Solution:
             v1 = l1.val if l1 else 0
             v2 = l2.val if l2 else 0
             add = v1 + v2 + carry
-            mod = add % 10
-
             new_node = ListNode(add % 10)
             carry = add // 10
             tail.next = new_node
