@@ -6,6 +6,7 @@
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         
+#     NEETCODE APPROACH:
         dummy = ListNode()
         tail = dummy
         carry = 0
@@ -14,7 +15,7 @@ class Solution:
             v2 = l2.val if l2 else 0
             add = v1 + v2 + carry
             mod = add % 10
-            quo = add // 10
+
             new_node = ListNode(add % 10)
             carry = add // 10
             tail.next = new_node
