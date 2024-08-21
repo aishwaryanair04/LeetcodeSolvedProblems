@@ -9,10 +9,9 @@ class Solution:
         for r in range(len(s)):
             if s[r] in hashmap.keys():
                 hashmap[s[r]] += 1
-                maxf = max(maxf, hashmap[s[r]])
             else:
                 hashmap[s[r]] = 1
-                maxf = max(maxf, hashmap[s[r]])
+            maxf = max(maxf, hashmap[s[r]])
             
             while (r - l + 1) - maxf > k:
                 hashmap[s[l]] -= 1
