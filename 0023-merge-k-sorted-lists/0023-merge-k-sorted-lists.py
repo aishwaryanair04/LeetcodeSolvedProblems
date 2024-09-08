@@ -31,7 +31,13 @@ class Solution:
             if l1.val < l2.val:
                 tail.next = l1
                 l1 = l1.next
+            elif l2.val < l1.val:
+                tail.next = l2
+                l2 = l2.next
             else:
+                tail.next = l1
+                l1 = l1.next
+                tail = tail.next
                 tail.next = l2
                 l2 = l2.next
             
