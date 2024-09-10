@@ -14,8 +14,7 @@ class Solution:
                 l += 1
   
             if nums[r] != 0 and nums[l] == 0:
-                nums[l] = nums[r]
-                nums[r] = 0
+                nums[l], nums[r] = nums[r], nums[l]
             
             r += 1
         
