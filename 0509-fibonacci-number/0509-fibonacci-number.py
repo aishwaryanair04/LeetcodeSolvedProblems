@@ -2,10 +2,8 @@ class Solution:
     def fib(self, n: int) -> int:
         
         # BASE CASE
-        if n == 0:
-            return 0
-        if n == 1:
-            return 1
+        if n <= 1:
+            return n
         
         
         # RECURSIVE CASE
