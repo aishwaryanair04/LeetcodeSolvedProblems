@@ -7,5 +7,5 @@ class Solution:
         
         
         # RECURSIVE CASE
-        return self.fib(n-1) + self.fib(n-2)
+        return self.fib(n-2) + self.fib(n-1)
         
