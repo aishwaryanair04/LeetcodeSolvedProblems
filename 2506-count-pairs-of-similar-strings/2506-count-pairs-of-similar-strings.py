@@ -14,7 +14,7 @@ class Solution:
         count = 0
         for val in hashmap.values():
             k = len(val)
-            count += (k*(k-1))//2
+            count += (k*(k-1))//2  #permutations and combinations
         
         return count
             
