@@ -13,8 +13,10 @@ class Solution:
         
         count = 0
         for val in hashmap.values():
-            k = len(val)
-            count += (k*(k-1))//2  #permutations and combinations
+            if len(val) >= 2:
+                
+                k = len(val)
+                count += (k*(k-1))//2  #permutations and combinations
         
         return count
             
