@@ -8,15 +8,30 @@ class Solution:
     def closestValue(self, root: Optional[TreeNode], target: float) -> int:
         
         curr = root.val if root else None
+        
         while root:
             if abs(root.val - target) < abs(curr - target):
                 curr = root.val
             elif abs(root.val - target) == abs(curr - target):
-                curr= min(root.val, curr)
-            if root.val < target:
+                curr = min(root.val, curr)
+            if target > root.val:
                 root = root.right
             else:
                 root = root.left
+        
         return curr
+
+        
+        # curr = root.val if root else None
+        # while root:
+        #     if abs(root.val - target) < abs(curr - target):
+        #         curr = root.val
+        #     elif abs(root.val - target) == abs(curr - target):
+        #         curr= min(root.val, curr)
+        #     if root.val < target:
+        #         root = root.right
+        #     else:
+        #         root = root.left
+        # return curr
         
         
