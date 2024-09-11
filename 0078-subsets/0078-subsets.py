@@ -3,24 +3,40 @@ class Solution:
         
         res = []
         
-        subset = []
-        
-        def dfs(i):
+        def subs(i, arr):
             if i >= len(nums):
-                res.append(subset.copy())
+                res.append(arr.copy())
                 return
             
-            #Decision to include nums[i]:
-            subset.append(nums[i])
-            dfs(i + 1)
-            
-            
-            #Decision to not include nums[i]:
-            subset.pop()
-            dfs(i + 1)
+            arr.append(nums[i])
+            subs(i+1, arr)
+            arr.remove(nums[i])
+            subs(i+1, arr)
         
-        dfs(0)
+        subs(0, [])
         return res
+        
+        
+#         res = []
+        
+#         subset = []
+        
+#         def dfs(i):
+#             if i >= len(nums):
+#                 res.append(subset.copy())
+#                 return
+            
+#             #Decision to include nums[i]:
+#             subset.append(nums[i])
+#             dfs(i + 1)
+            
+            
+#             #Decision to not include nums[i]:
+#             subset.pop()
+#             dfs(i + 1)
+        
+#         dfs(0)
+#         return res
             
             
         
