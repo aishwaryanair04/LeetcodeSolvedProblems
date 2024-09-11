@@ -1,6 +1,8 @@
 class Solution:
     def fib(self, n: int) -> int:
         
+        #DP using Tabulation
+        
         if n <= 1:
             return n
         
@@ -13,9 +15,10 @@ class Solution:
             prev2 = prev
             prev = curr
         
-        return prev
+        return curr
             
-        
+
+        #DP using Memoization
 #         def dp(n, arr):
 #             if n <= 1:
 #                 return n
@@ -27,6 +30,7 @@ class Solution:
 #         arr = [-1] * (n+1)
 #         return dp(n, arr)
         
+    # Recursion
 #         # BASE CASE
 #         if n <= 1:
 #             return n
