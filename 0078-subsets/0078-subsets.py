@@ -5,12 +5,10 @@ class Solution:
         
         def subs(i, arr):
             if i >= len(nums):
-                res.append(arr.copy())
+                res.append(arr)
                 return
             
-            arr.append(nums[i])
-            subs(i+1, arr)
-            arr.remove(nums[i])
+            subs(i+1, arr+[nums[i]])
             subs(i+1, arr)
         
         subs(0, [])
