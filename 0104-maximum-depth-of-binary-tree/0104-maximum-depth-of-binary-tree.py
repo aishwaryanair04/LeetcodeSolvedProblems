@@ -11,7 +11,7 @@ class Solution:
             return 0
         
         res = 0
-        q = collections.deque([root])
+        q = deque([root])
         
         while q:
             for i in range(len(q)):
