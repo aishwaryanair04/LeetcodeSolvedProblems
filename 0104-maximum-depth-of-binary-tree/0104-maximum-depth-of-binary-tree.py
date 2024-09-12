@@ -10,19 +10,69 @@ class Solution:
         if not root:
             return 0
         
+        res = 0
         q = collections.deque([root])
-        level = 0
         
         while q:
             for i in range(len(q)):
                 node = q.popleft()
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
+                if node:
+                    if node.left:
+                        q.append(node.left)
+                    if node.right:
+                        q.append(node.right)
+            res += 1
+        
+        return res
             
-            level += 1
-        return level
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+#         if not root:
+#             return 0
+
+#         depth = 0
+#         q = collections.deque([root])
+
+#         while q:
+#             for i in range(len(q)):
+#                 node = q.popleft()
+#                 if node:
+#                     if node.left:
+#                         q.append(node.left)
+#                     if node.right:
+#                         q.append(node.right)
+#             depth += 1
+        
+#         return depth
         
         
         
