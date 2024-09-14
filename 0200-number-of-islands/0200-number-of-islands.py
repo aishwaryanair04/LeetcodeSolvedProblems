@@ -1,5 +1,9 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
+        rows, cols = len(grid), len(grid[0])
+        vis = set()
+        res = 0
+        
         
         def bfs(i, j):
             q = collections.deque()
@@ -14,10 +18,7 @@ class Solution:
                         grid[row + r][col+c] == "1" and (row+r, col+c) not in vis):
                         q.append((row+r, col+c))
                         vis.add((row+r, col+c))
-        
-        rows, cols = len(grid), len(grid[0])
-        vis = set()
-        res = 0
+    
         
         for i in range(rows):
             for j in range(cols):
