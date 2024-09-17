@@ -2,6 +2,7 @@ class Solution:
     def findShortestSubArray(self, nums: List[int]) -> int:
         
         hashmap = {}
+        res = float("inf")
         
         for i,n in enumerate(nums):
             if n in hashmap:
@@ -10,14 +11,68 @@ class Solution:
                 hashmap[n] = [i]
         
         degree = max(len(val) for val in hashmap.values())
+        for ind in hashmap.values():
+            if len(ind) == degree:
+                res = min(res, (ind[-1] - ind[0])+1)
+        return res
         
-        res = len(nums)
         
-        for indices in hashmap.values():
-            if len(indices) == degree:
-                res = min(res, indices[-1]-indices[0])
+            
+            
+            
         
-        return res+1
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+#         hashmap = {}
+        
+#         for i,n in enumerate(nums):
+#             if n in hashmap:
+#                 hashmap[n].append(i)
+#             else:
+#                 hashmap[n] = [i]
+        
+#         degree = max(len(val) for val in hashmap.values())
+        
+#         res = len(nums)
+        
+#         for indices in hashmap.values():
+#             if len(indices) == degree:
+#                 res = min(res, indices[-1]-indices[0])
+        
+#         return res+1
         
         
         
